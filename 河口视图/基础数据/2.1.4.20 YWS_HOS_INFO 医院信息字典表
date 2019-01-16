@@ -1,0 +1,9 @@
+CREATE OR REPLACE VIEW YWS_HOS_INFO AS
+--2.1.4.20 YWS_HOS_INFO 医院信息字典表
+select 
+  NULL HOS_CODE	,--医院代码
+  NULL HOS_NAME	,--医院名称
+  NULL HOS_LVL	  ,--医院等级
+  NULL AREA_CODE	,--区域代码
+  NULL AREA_NAME	--区域名称
+  FROM HOSPITAL_INFO T1

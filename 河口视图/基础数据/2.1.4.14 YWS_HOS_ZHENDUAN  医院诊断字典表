@@ -1,0 +1,8 @@
+CREATE OR REPLACE VIEW YWS_HOS_ZHENDUAN AS
+--2.1.4.14 YWS_HOS_ZHENDUAN  医院诊断字典表
+       SELECT 
+            T.ICD10 ZD_CODE	,  --医院诊断代码
+            T.NAME ZD_NAME	,  --医院诊断名称
+            NULL ZD_SP	  ,  --名称的首拼
+            NULL HOS_CODE--医院代码
+        FROM Z_JBBM_ZYZD T

@@ -1,0 +1,8 @@
+--2.1.4.13 YWS_HOS_GYTJ 给药途径表
+CREATE OR REPLACE VIEW YWS_HOS_GYTJ AS
+       SELECT 
+        T.USEWAY_CODE GYTJ_CODE	,--给药途径代码
+        T.USEWAY_NAME GYTJ_NAME	,--给药途径名称
+        SUBSTR(T.INPUT_CODE,0,1) GYTJ_SP	  ,--名称的首拼
+        NULL HOS_CODE	--医院代码
+        FROM DRUG_USEWAY_DICT T

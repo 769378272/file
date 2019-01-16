@@ -1,0 +1,7 @@
+CREATE OR REPLACE VIEW YWS_HOS_CF_TYPE AS
+--2.1.4.15 YWS_HOS_CF_TYPE  医院处方笺类型字典表
+       SELECT 
+         NULL CF_TYPE	    ,  --医院处方笺类型代码
+         NULL CF_TYPE_NAME,	--医院处方笺类型名称
+         NULL HOS_CODE	    --医院代码
+        FROM dual T

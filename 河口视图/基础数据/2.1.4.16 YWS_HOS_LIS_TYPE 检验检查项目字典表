@@ -1,0 +1,12 @@
+
+CREATE OR REPLACE VIEW YWS_HOS_LIS_TYPE AS
+--2.1.4.16 YWS_HOS_LIS_TYPE 检验检查项目字典表
+       SELECT 
+          T.ORDER_CODE LIS_CODE	 ,   --检验检查医院代码
+          T.ORDER_NAME LIS_NAME	 ,   --检验检查名称
+          SUBSTR(T.INPUT_CODE,0,1) LIS_SP	   ,   --名称的首拼
+          NULL LIS_YB_CODE,	  --检验检查医保收费码
+          NULL PARENT_CODE,	  --父级项目代码
+          NULL HOS_CODE	    --医院代码
+        FROM ORDER_ITEM T
+             WHERE T.CLINIC_TYPE_CODE IN('C','D')

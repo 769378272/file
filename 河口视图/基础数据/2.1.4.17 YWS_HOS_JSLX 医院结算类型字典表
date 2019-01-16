@@ -1,0 +1,8 @@
+CREATE OR REPLACE VIEW YWS_HOS_JSLX AS
+--2.1.4.17 YWS_HOS_JSLX 医院结算类型字典表
+       SELECT 
+        T.VALUE_ID JSLX_CODE,	--结算类型代码
+        T.VALUE_NAME JSLX_NAME,	--结算类型名称
+        NULL HOS_CODE	--医院代码
+        FROM PUBLIC_DICT T
+        WHERE T.DICT_NAME = 'SETTLEMENT_TYPE'

@@ -1,0 +1,8 @@
+-- 2.1.4.10 YWS_HOS_EMPLOYEE_KESHI 医院员工与科室对应关系字典表
+CREATE OR REPLACE VIEW YWS_HOS_EMPLOYEE_KESHI AS
+select NULL IS_OP_IP	        ,--门诊住院标识
+       T.USER_ID EMPLOYEE_NUMBER	,--员工工号
+       T.DEPT_CODE KESHI_CODE	      ,--科室编码
+       NULL IS_DEL	          ,--数据状态
+       NULL HOS_CODE	        --医院代码 
+       from USER_DEPT_REL T

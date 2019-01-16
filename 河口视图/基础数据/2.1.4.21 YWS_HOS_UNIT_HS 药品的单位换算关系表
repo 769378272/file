@@ -1,0 +1,11 @@
+CREATE OR REPLACE VIEW YWS_HOS_UNIT_HS AS
+--2.1.4.21 YWS_HOS_UNIT_HS 药品的单位换算关系表
+SELECT 
+  T1.DRUG_CODE MEDI_CODE	    ,--医院药品代码
+  T1.DRUG_SPEC MEDI_SPEC	    ,--医院药品规格
+  T1.Store_Unit UNIT_ORG	    ,--源单位名称
+  1 UNIT_ORG_QTY	,--源单位数量
+  T1.BASE_UNIT UNIT_DST	    ,--目标单位名称
+  T1.Store_Pack_Amount UNIT_DST_QTY	,--目标单位数量
+  NULL HOS_CODE	    --医院代码
+  FROM DRUG_LIST T1

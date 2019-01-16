@@ -1,0 +1,10 @@
+CREATE OR REPLACE VIEW YWS_HOS_OT_TYPE AS
+--2.1.4.18 YWS_HOS_OT_TYPE 手术项目字典表
+select 
+      T.DISEASE_ID OT_ID	        ,--手术项目编码
+      T.NAME OT_NAME	      ,--手术项目名称
+      SUBSTR(T.INPUT_CODE,0,1) OT_SP	        ,--名称的首拼
+      NULL INCISION_TYPE	,--切口类型
+      T.STATUS IS_DEL	      ,--状态标记
+      NULL HOS_CODE	    --医院代码
+FROM DISEASE_DICT T WHERE T.DISEASE_TYPE = 'S'
